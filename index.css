@@ -47,8 +47,10 @@
 .container {
     position: relative;
     overflow: hidden;
-    width: 100%;
-    padding-top: 50%; 
+    display: flex;
+    width: 30%;
+    min-width: 200px;
+    padding-top: 25%; 
 
   }
   
