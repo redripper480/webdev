@@ -1,0 +1,22 @@
+.navbar {
+    transition: background-color 0.3s ease !important;
+}
+#main-cont{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  justify-content: space-between;
+  align-content: center;
+  align-items: space;
+  
+}
+
+.flex-cont{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
