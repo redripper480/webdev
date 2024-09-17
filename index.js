@@ -1,11 +1,29 @@
-const section1 = document.querySelector('.navbar')
+var i = 0;
+var wordIndex = 0;
+var words = ['A STUDENT', 'A DEVELOPER','A BABYGIRL', 'ZORO'];
+var speed = 100; 
+var deleteSpeed = 100; 
+var delayBetweenWords = 1000;
 
-window.addEventListener('scroll', () => {
-  let y = 1 + (window.scrollY) / 150
-
-  if (window.scrollY === 0) {
-    section1.style.backgroundColor = 'transparent' 
+function typeWriter() {
+  if (i < words[wordIndex].length) {
+    document.getElementById("demo").innerHTML += words[wordIndex].charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
   } else {
-    section1.style.backgroundColor = `rgb(13,13,13)`
+    setTimeout(eraseText, delayBetweenWords);
   }
-})
+}
+
+function eraseText() {
+  if (i > 0) {
+    document.getElementById("demo").innerHTML = words[wordIndex].substring(0, i-1);
+    i--;
+    setTimeout(eraseText, deleteSpeed);
+  } else {
+    wordIndex = (wordIndex + 1) % words.length;
+    setTimeout(typeWriter, speed); 
+  }
+}
+
+typeWriter(); 
