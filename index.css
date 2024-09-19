@@ -85,6 +85,24 @@
     border: 2px solid transparent
   }
   .navbar-brand:hover{
-    color: black;
+    color: black !important;
+    font-weight: bold !important;
     background: white;
   }
+.card-title{
+    text-align: center;
+    color: black;
+    background: rgb(255, 253, 222);
+    border-radius: 5px;
+    padding: 3px;
+
+}
+.card-body{
+    text-align: center;
+}
+.card{
+    background: transparent; border: 2px solid rgb(255, 253, 222); padding:20px !important;
+}
+.card-text{
+    color: white !important;
+}
